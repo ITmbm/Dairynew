@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+   <button id="btn">新建</button>
+   <ul id="ul"></ul>
+
+</body>
+<script src="./jquery-3.1.1.js"></script>
+<script>
+    let num = 0;
+    $('#btn').click(function(){
+        num ++;
+        let $li = $(`<li><span>${num}</span><input aa='${num}' style='display:none' value='${num}'><a class='del'>删除</a><a class='chg'>修改</a></li>`);
+        $('#ul').append($li);
+        $li.on('click','a.del',function(){
+            $li.remove();
+        })
+        let $txt = $li.find('input');
+        let $span = $li.find('span');
+        $li.on('click','a.chg',function(){
+            $txt.show();
+            $txt.select();
+            $span.hide();
+        })
+        $txt.blur(function(){
+            if(!$txt.val()){
+                $(this).val($(this).attr('aa'));
+            }else{
+                $span.html( $(this).val());
+            }
+            $txt.hide();
+            $span.show();
+        })
+    })
+
+</script>
+</html>
