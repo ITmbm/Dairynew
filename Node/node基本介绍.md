@@ -1,6 +1,8 @@
 #### 基本介绍
 ```
  Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境,
+ node 文件名 可以运行某个js文件
+ 这个js文件可以写后台语言
  Node.js 的包管理器 npm，是全球最大的开源库生态系统。
  
 特点：
@@ -184,3 +186,32 @@ fs.writeFile('./www/2.txt','dsnadkjsjdksa',(error)=>{
 
 fs.unlinkSync('./www/2.txt'); //删除指定的文件
 ```
+打开node，
+npm init
+输入ex
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
